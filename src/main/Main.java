@@ -62,11 +62,11 @@ public class Main {
 				List<Document> trainDoc = DataReader.selectProject(comments, projectForTraining);
 
 				// System.out.println("building dataset for training");
-				String trainingDataPath = "F:/research/technical debt/trainingData.arff";
+				String trainingDataPath = "tmp/trainingData.arff";
 				DataReader.outputArffData(trainDoc, trainingDataPath);
 
 				// System.out.println("building dataset for testing");
-				String testingDataPath = "F:/research/technical debt/testingData.arff";
+				String testingDataPath = "tmp/testingData.arff";
 				DataReader.outputArffData(testDoc, testingDataPath);
 
 				if (eLearner.getTestData() == null) {
